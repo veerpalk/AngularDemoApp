@@ -1,0 +1,44 @@
+<div class="card">
+  <div class="card-header" *ngIf='product'>
+{{pageTitle + ': ' + product.productName}}
+
+<div class="card-body">
+  <div>
+    <img [src]='product.imageUrl'
+        [title]='product.productName'
+        [style.width.px]='80'
+        [style.margin.px]='imageMargin'/>
+      </div>
+    
+    <div>
+        <a [routerLink]="['/products',product.productId]">
+            {{product.productName }}
+        </a>
+      </div>
+    <div> {{product.productCode | lowercase}} </div>
+  <div>{{product.releaseDate}}</div>
+<div> {{product.price | currency :'USD':'symbol':'1.2-2'|lowercase }} </div>
+<div>    {{product.starRating}} </div>
+
+<div>    <pm-star [rating]='product.starRating'></pm-star>
+      </div>
+      </div>
+
+
+
+  </div>
+
+<div class="card-footer">
+ <button class="btn btn-outline-secondary"
+ (click)='onBack()'
+ style="widows: 80px">
+ <i class="fa fa-chevron-left"></i>Back
+</button>
+</div>
+
+
+
+
+
+
+</div>

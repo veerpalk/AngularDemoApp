@@ -5,7 +5,7 @@ import { error } from '@angular/compiler/src/util';
 
 
 @Component({
-    selector:'pm-products',
+  
     templateUrl: './product-list.component.html',
     styleUrls:['./product-list.component.css']
 })

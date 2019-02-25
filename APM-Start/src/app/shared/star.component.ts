@@ -1,5 +1,4 @@
 import { Component,OnChanges,Input,Output, EventEmitter } from "@angular/core";
-import { start } from "repl";
 
 @Component({
     selector:'pm-star',
